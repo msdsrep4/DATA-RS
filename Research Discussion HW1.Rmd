@@ -1,0 +1,70 @@
+---
+title: "Research Discussion Assignment 1"
+author: "Eleanor R Secoquian"
+date: "6/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Requirement 1: Commercial Recommender System
+
+Now that we have covered basic techniques for recommender systems, choose one commercial recommender and describe how you think it works (content-based, collaborative filtering, etc). Does the technique deliver a good experience or are the recommendations off-target?
+
+You may also choose one of the three non-personalized recommenders (below) we went over in class and describe the technique and which of the three you prefer to use.
+
+1. Metacritic:  How We Create the Metascore Magic
+2. Rotten Tomatoes: About Rotten Tomatoes
+3. IMDB: FAQ for IMDb Ratings
+
+#### Research: Rich Relevance Recommender System
+
+The commercial Recommender System I chose is the "Rich Relevance Recommender System". The founder and CEO of Rich Relevance is David Selinger, an ex-Amazon staff who once led the research and development of Amazon's Data Mining and Personalization team. He helped in improving Amazon's recommendations technology. He mentioned that his founded recommendation system doesn't focus on a user's past shopping behavior but rather on real-time community patterns. Rich Relevance uses the personalization extensively, plus the wisdom of the crowds when relevant, and claims that its approach is “adaptive AI”. Selinger added that the key to Rich Relevance’s approach is that people don’t shop the same and so different recommendation types is used for each shopper. 
+
+What makes them think that their approach is superior to those that exclude personal user bahavior, like purchase history? Selinger that just like Amazon, they run A/B tests in order to find out what the most effective methods of recommendation are for any given customer or individual user. This approach leads to using a mix of ‘wisdom of the crowds’ and ‘personalization’.
+
+So we might ask, how this approach would work for a brand new customer, since there will be no shopper history to use? Rich Relevance “works good straight away, but takes a while to get great recommendations”. The approach is to start out with a new customer using existing data that the recommender system own, and then gather and test data about the new customer.
+
+The founder called their technology "ensemble learning." He reiterates that “no ‘single algorithmic’ approach can hope to keep up with today’s ever-changing consumer mindset”, the system won't try to force retailers and consumers “into a single bucket”. Instead, he said, it has “built a system that adapts to the retailer and to each customer in real-time”, which is done via “an adaptive type of artificial intelligence called Bayesian Ensemble Learning.” He claims that “algorithms like collaborative filtering are a thing of the past” and that ensemble learning is the next generation approach.
+
+
+
+
+
+
+
+#### Requirement 2: Attacks on Recommender System
+
+Read the article below and consider how to handle attacks on recommender systems. Can you think of a similar example where a collective effort to alter the workings of content recommendations have been successful? How would you design a system to prevent this kind of abuse?
+
+Travis M. Andrews, The Washington Post (2017): Wisdom of the crowd? IMDb users gang up on Christian Bale’s new movie before it even opens.
+
+#### Research: 
+
+In this day and age that information is readily available over the internet at just a flick of your fingers, comes with it is the burden to users whether these information can be trusted or not. One solution to this is the Recommender System which can help in predicting the outcomes based on the user's preferences. But even these systems are under attack. The perpetrators are attacking the security as well as user privacy. As mentioned in the research paper entitled: 'Poisoning Attacks to Graph-Based Recommender Systems', there are several kinds of security and privacy attacks to RS.
+
+Security Attacks - These attacks aim to spoof a recommender system such that a target item is recommended to as many
+or few users as possible. Specifically, poisoning attacks (also known as shilling attacks) aim to inject fake users with fake rating scores to the system such that a bad recommender system is learnt from the user-item rating score matrix.
+
+
+Privacy Attacks - The two attacks, i.e., item inference attacks and attribute inference attacks, were proposed to compromise user privacy in recommender systems. Item inference attacks infers the items that a target user has rated before, e.g., such items could be products that the target user purchased on Amazon, music the target user liked on Last.fm, and books the target user read on LibraryThing. The key intuition of their attacks is that a collaborative filtering recommender system makes recommendations based on users’ past behavior. Therefore, the recommendations made by a recommender system include information about users’ past behavior. Via tracking and analyzing the publicly available recommendations over time, an attacker could infer a target user’s past behavior, e.g., the items the user rated.
+
+Attribute inference attacks: A user’s rating behavior (e.g., rating scores to items, page likes on Facebook) is essentially statistically correlated to the user’s attributes (e.g., gender, political view, sexual orientation, interests, and location). Therefore, an attacker could infer a user’s private attributes based on its rating behavior via
+machine learning techniques, which capture the statistical correlations between rating behavior and attributes.
+
+One way to prevent these kinds of attack on Recommender system is to design the system in a way that the algorithm can detect attacks easily and effectively, such as applying a more robust algorithm against profile injection attacks, applying a captchas, and using statistical attack detection methods such as detecting group of users who collaborate to push/nuke items; using a machine-learning methods to discriminate real from fake profiles, etc.
+
+
+
+
+#### References:
+
+https://readwrite.com/2009/02/11/richrelevance_adaptive_recommendations/
+
+Joseph A. Calandrino, Ann Kilzer, Arvind Narayanan, Edward W. Felten, and Vitaly Shmatikov. 2011. “You Might Also Like:” Privacy Risks of Collaborative Filtering. In IEEE Symposium on Security and Privacy.
+
+Dietmar Jannach, Markus Zanker, Alexander Felfernig and Gerhard Friedrich, "Recommender Systems – An Introduction".
+Cambridge University Press, 2010
+
