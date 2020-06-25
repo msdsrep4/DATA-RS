@@ -1,0 +1,58 @@
+---
+title: "Research Discussion Assignment 2"
+author: "Eleanor R Secoquian"
+date: "6/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Requirement: Music Recommendations at Scale with Spark - Christopher Johnson (Spotify)
+
+For this discussion item, please watch the following talk and summarize what you found to be the most important or interesting points. The first half will cover some of the mathematical techniques covered in this unit's reading and the second half some of the data management challenges in an industrial-scale recommendation system.
+
+#### Research: 
+
+The speaker, Christopher Johnson, ML Manager of Spotify, talked about the ranges of ML models used by Spotify to power its music recommendation features such as the Discovery page, Radio, Related Artists and Now Playing. Because of the iterative nature of the models, they are a natural fit to the Spark computation paradigm and suffer from the IO overhead incurred by Hadoop. The speaker reviewed the ALS algorithm for Matrix Factorization with implicit feedback data and how they’ve managed to scaled it up to handle 100s of Billions of data points using Scala, Breeze, and Spark.
+
+In Spotify, there are four ways to find good recommendations, these are :
+
+**Manual Curation** : Not scalable but for smaller catalog it is good as being done by Songza and Beats
+
+**Manually Tag Attributes** : Not scalable but music experts manually tag all of the catalog as being by done by Pandora’s music genome project
+
+**Audio Content, Metadata, Text Analysis** : Music data is analyzed from music blogs, twitter or music articles as is done by echonest, Spotify
+
+**Collaborative Filtering** : Analyse music users are listening, finding relationships and recommending based on that
+
+What struck me is how Spotify knows the listeners so well that it can recommend wide variety of songs in the Discover Weekly Playlist. What is the secret on their Recommender Algorithm? As what I've learned, Spotify doesn’t only use a single revolutionary recommendation model but rather mix together some of the best strategies used by other services to create their own uniquely powerful discovery engine.
+
+In creating their Discover Weekly, they use three types of recommendation models such as:
+
+**Collaborative Filtering models** (i.e. the ones that Last.fm originally used), which analyze both your behavior and others’ behaviors.
+
+**Natural Language Processing (NLP) models**, which analyze text.
+
+**Audio models**, which analyze the raw audio tracks themselves.
+
+The main ingredient in the Spotify Discover Weekly is other people (collaborative filtering). They begin by looking at the more than 2 billion playlists created by its users, each reflects some music tastes and sensibilities which forms the core of human selections and groupings of songs of the recommendations. 
+
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics('Spotify_Magic.png')
+```
+
+
+This talk was about 6 years ago, probably at this point there's already a change if not an improvement on how they do the recommendations. From the talk of Peter Sobot entitled, Music Recommendations at Scale With Cloud Bigtable, he mentioned that in Spotify, they are now using the Google Cloud Bigtable in delivering recommendations at scale, rolling out experiments quickly while ingesting terabytes of data everyday via Cloud Dataflow.
+
+
+#### References:
+
+Sobot, Peter. Music Recommendations at Scale With Cloud Bigtable. https://www.youtube.com/watch?v=807uHC0Ia10
+
+Pasick, Adam. The magic that makes Spotify’s Discover Weekly playlists so good. https://qz.com/571007/the-magic-that-makes-spotifys-discover-weekly-playlists-so-damn-good/
+
+
+
+
