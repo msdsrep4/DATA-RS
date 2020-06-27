@@ -22,7 +22,7 @@ As more systems and sectors are driven by predictive analytics, there is increas
 
 I remember one of my professors in MSDS saying, that "Humans are by nature bias."
 
-In the article, Understanding Biases in Search & Recommender Systems, Dr. Baeza-Yates, the featured speaker in the article, started his talk by saying that there are three types of bias: **Statistical**, **Cultural** and **Cognitive**. He said, Statistical bias is the significant systematic deviation from a prior distribution; Cultural bias is the interpretations and judgments phenomena acquired through our life; and Cognitive bias is a systemic pattern of deviation from norm or rationality in judgment.
+In the article, Understanding Biases in Search & Recommender Systems, Dr. Baeza-Yates, the featured speaker, started his talk by saying that there are three types of bias: **Statistical**, **Cultural** and **Cognitive**. He said, Statistical bias is the significant systematic deviation from a prior distribution; Cultural bias is the interpretations and judgments phenomena acquired through our life; and Cognitive bias is a systemic pattern of deviation from norm or rationality in judgment.
 
 In the article, the author mentions that most critics of recommender systems focus on cultural biases, like gender, racial, sexual, age, religious, social, linguistic, geographic, political, educational, economic, and technological.
 
@@ -46,18 +46,16 @@ Some more example of data, self-selection and algorithmic biases:
 
 *-* And other interaction biases (i.e., which items are only seen by scrolling).
 
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics('Bias.png')
+```
 
 In the same article, Dr. Baeza-Yates answered the question, "What Is Being Fair?" It's very interesting how he illustrates his point, he uses the images of three kids watching a soccer match.
-
-
-```{r, eval=TRUE, echo=FALSE}
-knitr::include_graphics('EEJ.png')
-```
 
 He said that **equality** is the concept of equal treatment. It assumes that everyone benefits from standing on the same height of boxes. **Equity**, which is the concept of affirmative action, argues that each kid should get the box depending on their need so as to see over the fence. And lastly, **justice** or the concept of removing the systemic barrier (which causes the inequity) to enable all three kids see the game.
 
 
-So, I don't think bias in Recommender Systems is a bad thing. In fact, it is there to help us in being aware of our own biases.
+So, I don't think bias in Recommender Systems is a bad thing. In fact, it is there to help us in getting aware of our own biases.
 
 
 &nbsp;
