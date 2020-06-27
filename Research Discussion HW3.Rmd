@@ -1,0 +1,71 @@
+---
+title: "Research Discussion Assignment 3"
+author: "Eleanor RS"
+date: "06/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+&nbsp;
+&nbsp;
+
+#### Requirement: Algorithmic Discrimination and Human Bias in Recommender Systems
+
+As more systems and sectors are driven by predictive analytics, there is increasing awareness of the possibility and pitfalls of algorithmic discrimination. In what ways do you think Recommender Systems reinforce human bias? Reflecting on the techniques we have covered, do you think recommender systems reinforce or help to prevent unethical targeting or customer segmentation?  Please provide one or more examples to support your arguments.
+
+&nbsp;
+&nbsp;
+
+#### Research: 
+
+I remember one of my professors in MSDS saying, that "Humans are by nature bias."
+
+In the article, Understanding Biases in Search & Recommender Systems, Dr. Baeza-Yates, the featured speaker in the article, started his talk by saying that there are three types of bias: **Statistical**, **Cultural** and **Cognitive**. He said, Statistical bias is the significant systematic deviation from a prior distribution; Cultural bias is the interpretations and judgments phenomena acquired through our life; and Cognitive bias is a systemic pattern of deviation from norm or rationality in judgment.
+
+In the article, the author mentions that most critics of recommender systems focus on cultural biases, like gender, racial, sexual, age, religious, social, linguistic, geographic, political, educational, economic, and technological.
+
+These biases affect Recommender System since the systems are usually optimized by using implicit user feedback and the partially biased user data. For example, in an online store, you are initially shown with items that are new arrivals, trending, or on sale. Because online store uses Recommender System and this system is based on Machine Learning, it learns to reinforce its own biases. 
+
+However, bias in Recommender System is not always a bad thing. In fact, it is natural to expect gender bias when recommending clothes, shoes or undergarments. It is not a good thing when the Recommender System is applied to a Job Site where it is recommending job postings or information content.
+
+Some more example of data, self-selection and algorithmic biases:
+
+*-* Ranking bias (users assume that higher-ranked items are better choices).
+
+*-* Click bias (clicks on an item are considered positive user feedback).
+
+*-* Mouse movement bias (hovering over an item is considered positive user feedback).
+
+*-* Presentation bias (i.e., which items get exposure).
+
+*-* Position bias (which items are presented in the upper right corner of the page).
+
+*-* Social bias (which items include four- or five-star reviews).
+
+*-* And other interaction biases (i.e., which items are only seen by scrolling).
+
+
+In the same article, Dr. Baeza-Yates answered the question, "What Is Being Fair?" It's very interesting how he illustrates his point, he uses the images of three kids watching a soccer match.
+
+
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics('EEJ.png')
+```
+
+He said that **equality** is the concept of equal treatment. It assumes that everyone benefits from standing on the same height of boxes. **Equity**, which is the concept of affirmative action, argues that each kid should get the box depending on their need so as to see over the fence. And lastly, **justice** or the concept of removing the systemic barrier (which causes the inequity) to enable all three kids see the game.
+
+
+So, I don't think bias in Recommender Systems is a bad thing. In fact, it is there to help us in being aware of our own biases.
+
+
+&nbsp;
+&nbsp;
+
+#### References:
+
+Mc Mullan, Thomas. Are the algorithms that power dating apps racially biased? https://www.wired.co.uk/article/racial-bias-dating-apps
+
+Jarboe, Greg. Understanding Biases in Search & Recommender Systems. https://www.searchenginejournal.com/biases-search-recommender-systems/339319/
+
