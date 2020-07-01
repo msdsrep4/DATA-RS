@@ -1,0 +1,77 @@
+---
+title: "Research Discussion Assignment 4"
+author: "Eleanor RS"
+date: "06/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+&nbsp;
+&nbsp;
+
+#### Requirement: Mitigating the Harm of Recommender Systems
+
+Read one or more of the articles below and consider how to counter the radicalizing effects of recommender systems or ways to prevent algorithmic discrimination.
+
+Renee Diresta, Wired.com (2018): Up Next: A Better Recommendation System
+
+Zeynep Tufekci, The New York Times (2018): YouTube, the Great Radicalizer
+
+Sanjay Krishnan, Jay Patel, Michael J. Franklin, Ken Goldberg (n/a): Social Influence Bias in Recommender Systems: A Methodology for Learning, Analyzing, and Mitigating Bias in Ratings
+
+
+&nbsp;
+&nbsp;
+
+#### Research: 
+
+In the article, Up Next: A Better Recommendation System, written by Renee Diresta, she mentions that algorithms used by Facebook, YouTube, and other platforms keep us clicking and believes that it often promotes misinformation, abuse, and polarization. Recommendation engines she said are perhaps the biggest threat to societal cohesion on the internet—and, as a result, one of the biggest threats to societal cohesion in the offline world. The recommendation engines we engage with are broken in ways that have grave consequences: amplifie conspiracy theories, gamified news, nonsense infiltrating mainstream discourse, misinformed voters.
+
+In the article, YouTube, the Great Radicalizer, the writer, Zeynep Tefekci analyzes the impact of the website’s recommendation algorithm, and explains that youtube suggests content that is more and more intense than what viewers initially choose to watch. For example, “videos about vegetarianism led to videos about veganism. Videos about jogging led to videos about running ultramarathons. It seems as if you are never ‘hard core’ enough for YouTube’s recommendation algorithm. It promotes, recommends and disseminates videos in a manner that appears to constantly up the stakes. Given its billion or so users, YouTube may be one of the most powerful radicalizing instruments of the 21st century.”
+
+&nbsp;
+&nbsp;
+
+**How do we counter the radicalizing effects of recommender systems or what are the ways to prevent algorithmic discrimination?**
+
+To remedy the the effect of social influence bias in recommender systems, researchers of the study (i.e. Social Influence Bias in Recommender Systems: A Methodology for Learning, Analyzing, and Mitigating Bias in Ratings), propose a methodology to learn, analyze and mitigate.
+
+Learning - a baseline dataset is established with an initial set of participants by allowing them to rate items twice before seeing the median rating, and again after seeing it. 
+
+Analysis - a new non-parametric significance test based on the Wilcoxon statistic can quantify the extent of social influence bias in this data. If this bias is significant, a Mitigation phase is proposed where mathematical models are constructed from this data using polynomial regression and the Bayesian Information Criterion (BIC) and then inverted to produce a filter that can reduce the effect of social influence bias.  
+
+Mitigate - the results of their study suggest that social influence bias can be significant in recommender systems and this bias can be substantially reduced with Machine Learning. Mathematical models are constructed from the data using polynomial regression and the Bayesian Information Criterion (BIC).
+
+
+The goal of Recommender Systems is to entice the buyers to buy more. To make that happen, the system should display meaningful items to the user. As what we've learned from the course, we can reduce algorithmic bias and achieve the desired goal if we apply any of these techniques: diversity, serendipity, novelty or relevance.
+
+
+&nbsp;
+
+```{r, eval=TRUE, echo=FALSE}
+knitr::include_graphics('Goal_of_RS.png')
+```
+
+**Diversity** measures how dissimilar recommended items are for a user. This similarity is often determined using the item’s content but can also be determined using how similarly items are rated.
+
+**Relevance** represents the percentage of things (items, users, or ratings) that the recommender system was able to recommend. Not being able to predict a particular set of users or items is usually caused by an insufficient number of ratings, and is generally known as the cold start problem.
+
+**Serendipity** is the measure of how surprising the successful or relevant recommendations are. There are two parts to this equation: degree of surprise and relevance to the user. Surprise is measured as the difference of the probability an item i is recommended for a user and the probability that item i is recommended for any user. 
+
+**Novelty** determines how unknown recommended items are to a user. Novelty is somewhat like the first half of serendipity — surprise — without the second portion — relevance.
+
+
+&nbsp;
+&nbsp;
+
+#### References:
+
+Gai, Phyliss Jia. Making Recommendations More Effective Through Framings: Impacts of User- Versus Item-Based Framings on Recommendation Click-Throughs. https://journals.sagepub.com/doi/full/10.1177/0022242919873901
+
+Anna B. Recommender Systems — It’s Not All About the Accuracy. https://gab41.lab41.org/recommender-systems-its-not-all-about-the-accuracy-562c7dceeaff#.5exl13wqv
+
+Pandey P. The Remarkable world of Recommender Systems https://towardsdatascience.com/the-remarkable-world-of-recommender-systems-bff4b9cbe6a7
+
+ 
